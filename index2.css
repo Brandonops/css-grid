@@ -1,0 +1,44 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "hd hd hd hd hd hd" 
+    "sb sb con con con con"
+    "ft ft ft ft ft ft";
+    height: 100vh;
+
+}
+
+@media screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "hd hd hd hd"
+        "con con con con"
+        "sb sb sb sb"
+        "ft ft ft ft";
+    }
+}
+
+.grid > div {
+    border: 1px solid blue;
+    padding: 5px;
+    background-color: pink;
+}
+
+div.header {
+    grid-area: hd;
+}
+
+div.content {
+    grid-area: con;
+}
+
+div.sidebar {
+    grid-area: sb;
+}
+
+div.footer {
+    grid-area: ft;
+}
