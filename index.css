@@ -1,0 +1,38 @@
+body {
+    background-color: magenta;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 300px 1fr;
+    grid-auto-rows: 200px 100px;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.grid > div {
+    padding: 5px;
+    background-color: crimson;
+    border: 1px solid rgb(132, 0, 255);
+}
+
+#item1 {
+    background-color: teal;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#item2 {
+    background-color: yellowgreen;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#item3 {
+    background-color: lightslategrey;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
